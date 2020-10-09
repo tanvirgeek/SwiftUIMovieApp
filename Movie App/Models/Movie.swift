@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+struct Movies:Decodable {
+    let results : [Movie]
+}
+struct Movie:Decodable {
+    let popularity:Double?
+    let genre_ids:[Int]?
+    let title:String?
+    let vote_average:Double?
+    let overview:String?
+}
+

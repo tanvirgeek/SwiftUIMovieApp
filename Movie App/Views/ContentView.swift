@@ -9,8 +9,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var moviesVM = MoviesViewModel()
+    
     var body: some View {
-        Text("Hello, World!")
+        MovieList(movies: moviesVM.movies)
     }
 }
 
